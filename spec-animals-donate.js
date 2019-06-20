@@ -1,31 +1,18 @@
 describe('Animals-Now Donate', function () {
 
-  it('should add one and two', function () {
-    browser.get('http://juliemr.github.io/protractor-demo/');
-    element(by.model('first')).sendKeys(1);
-    element(by.model('second')).sendKeys(2);
 
-    element(by.id('gobutton')).click();
+  it('Donate', function () {
+    browser.waitForAngularEnabled(false);
 
-    expect(element(by.binding('latest')).getText()).
-      // toEqual('5'); // This is wrong!
-      toEqual('3');
+    browser.get('https://animals-now.org/donate?group=IT');
+
+    element(by.css('button.fl-button-submit')).click();
+
+    //TODO: wait for page to reload, instead of doing a sleep
+    browser.sleep(4000);
+
+    expect(browser.getCurrentUrl())
+      .toContain('https://secure.cardcom.solutions/External/lowProfileClearing/46443.aspx');
   });
 
-  // browser.waitForAngularEnabled(false);
-
-  // it('Subscribe to Newsletter - invalid email shows error message', function () {
-  //   browser.get('https://animals-now.org');
-
-
-  //   element(by.id('tfa_1')).sendKeys('בודק'); //TODO: by title?
-  //   element(by.id('tfa_3')).sendKeys('invlidEmail'); //TODO: by title?
-  //   var subscribeElem = element(by.css('input[value="צרפו אותי!"]'));
-  //   subscribeElem.click();
-
-  //   //TODO: find validation error message
-
-  //   expect(browser.getLocationAbsUrl())
-  //     .toBe('https://animals-now.org');
-  // });
 });
