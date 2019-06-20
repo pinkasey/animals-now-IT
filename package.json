@@ -1,0 +1,25 @@
+{
+  "name": "animals-now-it.git",
+  "version": "1.0.0",
+  "description": "Integration Tests for Animals-Now website",
+  "main": "index.js",
+  "scripts": {
+    "test": "protractor conf-animals.js",
+    "webdriver-start": "webdriver-manager start",
+    "webdriver-version": "webdriver-manager start",
+    "webdriver-set-chrome-version": "webdriver-manager update --versions.chrome 74.0.3729.169"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pinkasey/animals-now-IT.git"
+  },
+  "author": "eyal@animals-now.org",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/pinkasey/animals-now-IT/issues"
+  },
+  "homepage": "https://github.com/pinkasey/animals-now-IT#readme",
+  "dependencies": {
+    "protractor": "^5.4.2"
+  }
+}
