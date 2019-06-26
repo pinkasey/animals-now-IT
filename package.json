@@ -7,6 +7,7 @@
     "test": "protractor conf-animals.js",
     "webdriver-update": "webdriver-manager update",
     "webdriver-start": "webdriver-manager start",
+    "webdriver-stop": "webdriver-manager shutdown",
     "webdriver-version": "webdriver-manager version",
     "webdriver-set-chrome-version": "webdriver-manager update --versions.chrome 74.0.3729.169"
   },
