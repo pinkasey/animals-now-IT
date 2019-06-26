@@ -5,8 +5,9 @@
   "main": "index.js",
   "scripts": {
     "test": "protractor conf-animals.js",
+    "webdriver-update": "webdriver-manager update",
     "webdriver-start": "webdriver-manager start",
-    "webdriver-version": "webdriver-manager start",
+    "webdriver-version": "webdriver-manager version",
     "webdriver-set-chrome-version": "webdriver-manager update --versions.chrome 74.0.3729.169"
   },
   "repository": {
