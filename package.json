@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "protractor conf-animals.js",
+    "test-failure": "protractor conf-animals-failure.js",
     "webdriver-update": "webdriver-manager update",
     "webdriver-start": "webdriver-manager start",
     "webdriver-stop": "webdriver-manager shutdown",
@@ -22,6 +23,7 @@
   },
   "homepage": "https://github.com/pinkasey/animals-now-IT#readme",
   "dependencies": {
+    "jasmine-allure-reporter": "^1.0.2",
     "protractor": "^5.4.2"
   }
 }
