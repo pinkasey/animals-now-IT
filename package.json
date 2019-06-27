@@ -7,7 +7,8 @@
     "test": "protractor conf-animals.js",
     "test-failure": "protractor conf-animals-failure.js",
     "webdriver-update": "webdriver-manager update",
-    "webdriver-start": "webdriver-manager start",
+    "webdriver-start": "webdriver-manager start --detach",
+    "webdriver-start-attached": "webdriver-manager start",
     "webdriver-stop": "webdriver-manager shutdown",
     "webdriver-version": "webdriver-manager version",
     "webdriver-set-chrome-version": "webdriver-manager update --versions.chrome 74.0.3729.169"
