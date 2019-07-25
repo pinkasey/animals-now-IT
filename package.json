@@ -4,8 +4,10 @@
   "description": "Integration Tests for Animals-Now website",
   "main": "index.js",
   "scripts": {
-    "test": "protractor conf-animals.js",
-    "test-failure": "protractor conf-animals-failure.js",
+    "cleandir": "cleandir ./allure-results",
+    "test": "npm run cleandir && protractor conf-animals.js",
+    "test-failure": "npm run cleandir && protractor conf-animals-failure.js",
+    "sanity": "protractor conf-animals-sanity.js",
     "webdriver-update": "webdriver-manager update",
     "webdriver-start": "webdriver-manager start --detach",
     "webdriver-start-attached": "webdriver-manager start",
@@ -26,5 +28,8 @@
   "dependencies": {
     "jasmine-allure-reporter": "^1.0.2",
     "protractor": "^5.4.2"
+  },
+  "devDependencies": {
+    "clean-dir": "^1.0.3"
   }
 }
