@@ -10,7 +10,7 @@ describe('Animals-Now Donate', function () {
     
     element(by.css('button.fl-button-submit')).click();
 
-    browser.wait(EC.urlContains('secure.cardcom.solutions'), 5000);
+    browser.wait(EC.urlContains('secure.cardcom.solutions'), 10000);
 
     //This is somewhat redundant - the browswer.wait would fail before this fails
     expect(browser.getCurrentUrl())
