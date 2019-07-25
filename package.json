@@ -7,7 +7,7 @@
     "cleandir": "cleandir ./allure-results",
     "test": "npm run cleandir && protractor conf-animals.js",
     "test-failure": "npm run cleandir && protractor conf-animals-failure.js",
-    "sanity": "protractor conf-animals-sanity.js",
+    "sanity": "npm run cleandir && protractor conf-animals-sanity.js",
     "webdriver-update": "webdriver-manager update",
     "webdriver-start": "webdriver-manager start --detach",
     "webdriver-start-attached": "webdriver-manager start",
