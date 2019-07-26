@@ -7,7 +7,7 @@ describe('Animals-Now Donate', function () {
   });
 
   it('Simply press Donate button', function () {
-    
+    console.log("starting `Simply press Donate button`");
     element(by.css('button.fl-button-submit')).click();
 
     browser.wait(EC.urlContains('secure.cardcom.solutions'), 10000);
@@ -19,6 +19,7 @@ describe('Animals-Now Donate', function () {
     //TODO:
     //verify amount is right, no HOK text present, etc.
 
+    console.log("done `Simply press Donate button`");
   });
 
 });
