@@ -14,12 +14,18 @@ describe('Animals-Now Donate', function () {
 
     //This is somewhat redundant - the browswer.wait would fail before this fails
     expect(browser.getCurrentUrl())
-      .toContain('https://secure.cardcom.solutions/External/lowProfileClearing/46443.aspx');
+      .toContain('https://secure.cardcom.solutions/External/lowProfileClearing/');
 
     //TODO:
     //verify amount is right, no HOK text present, etc.
 
     console.log("done `Simply press Donate button`");
+
+    //click the Paypal button
+    element(by.css("#paypalSingleLink > img")).click();
+    browser.wait(EC.urlContains('https://www.paypal.com/cgi-bin/webscr?cmd=_express-checkout'), 10000);
+    expect(browser.getCurrentUrl())
+        .toContain('https://www.paypal.com/cgi-bin/webscr?cmd=_express-checkout');
   });
 
 });
