@@ -22,7 +22,9 @@ describe('Animals-Now Donate', function () {
     console.log("done `Simply press Donate button`");
 
     //click the Paypal button
-    element(by.css("#paypalSingleLink > img")).click();
+    let paypalButtonImg = element(by.css("#paypalSingleLink > img"));
+    browser.wait(EC.visibilityOf(paypalButtonImg), 6000);
+    paypalButtonImg.click();
     browser.wait(EC.urlContains('https://www.paypal.com/cgi-bin/webscr?cmd=_express-checkout'), 10000);
     expect(browser.getCurrentUrl())
         .toContain('https://www.paypal.com/cgi-bin/webscr?cmd=_express-checkout');
