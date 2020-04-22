@@ -5,7 +5,8 @@ exports.getBaseConf = function () {
         onPrepare: function () {
             var AllureReporter = require('jasmine-allure-reporter');
             jasmine.getEnv().addReporter(new AllureReporter({
-                resultsDir: 'allure-results'
+                resultsDir: 'allure-results',
+                disableWebdriverStepsReporting: true,
             }));
         },
 
