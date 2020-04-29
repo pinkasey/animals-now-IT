@@ -27,8 +27,8 @@
   "homepage": "https://github.com/pinkasey/animals-now-IT#readme",
   "dependencies": {
     "jasmine-allure-reporter": "^1.0.2",
-    "protractor": "^5.4.2",
-    "query-string": "^6.8.1"
+    "protractor": "^5.4.4",
+    "query-string": "^6.12.1"
   },
   "devDependencies": {
     "clean-dir": "^1.0.3"
